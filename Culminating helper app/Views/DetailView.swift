@@ -13,10 +13,26 @@ struct DetailView: View {
     var body: some View {
      
         VStack {
+            
+            Text(item.resName)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            
             Image(item.resImage)
                 .resizable()
                 .scaledToFit()
                 .padding(.horizontal)
+            
+            Text(item.resDescription)
+            
+            List(item.resItems) { food in
+                NavigationLink {
+                    MenuView()
+                }
+            label: {
+                Text("")
+            }
+                
+            }
             
             
             
