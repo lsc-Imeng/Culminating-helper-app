@@ -66,7 +66,7 @@ struct ListItemView: View {
     }
 }
 
-#Preview {
-    ListItemView(currentRes: canoeAndPaddle)
-        .padding()
-}
+//#Preview {
+//    ListItemView(currentRes: canoeAndPaddle)
+//        .padding()
+//}

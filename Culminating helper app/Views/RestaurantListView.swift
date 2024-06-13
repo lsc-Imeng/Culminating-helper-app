@@ -1,5 +1,5 @@
 //
-//  ListView.swift
+//  RestaurantListView.swift
 //  Culminating helper app
 //
 //  Created by 孟元森 on 2024-06-11.
@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-struct ListView: View {
+struct RestaurantListView: View {
     
     var body: some View {
         
@@ -19,13 +19,13 @@ struct ListView: View {
             
             
             
-            List(allRes) { currentRes in
+            List(sampleRestaurants) { currentRes in
                 
                 
                 
                 NavigationLink {
                     
-                    DetailView(item: currentRes)
+                    RestaurantDetailView(restaurant: currentRes)
                     
                 } label: {
                     
@@ -52,7 +52,7 @@ struct ListView: View {
     }
 }
 #Preview {
-    ListView()
+    RestaurantListView()
 }
 
 

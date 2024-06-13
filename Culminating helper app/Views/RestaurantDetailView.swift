@@ -7,34 +7,27 @@
 
 import SwiftUI
 
-struct DetailView: View {
-    let item: Restaurant
+struct RestaurantDetailView: View {
+    let restaurant: Restaurant
     
     var body: some View {
-     
+        
         VStack {
             
-            Text(item.resName)
+            Text(restaurant.resName)
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             
-            Image(item.resImage)
+            Image(restaurant.resImage)
                 .resizable()
                 .scaledToFit()
                 .padding(.horizontal)
             
-            Text(item.resDescription)
+            Text(restaurant.resDescription)
             
-            List(item.resItems) { food in
-                NavigationLink {
-                    MenuView()
-                }
-            label: {
-                Text("")
-            }
+            List(restaurant.resItems) { menuItem in
+                Text(menuItem.item)
                 
             }
-            
-            
             
             
         }
@@ -42,6 +35,6 @@ struct DetailView: View {
     }
 }
 
-#Preview {
-    DetailView(item: canoeAndPaddle)
-}
+//#Preview {
+//    RestaurantDetailView(restaurant: canoeAndPaddle)
+//}
