@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListItemView: View {
     
-    let item: Resturant
+    let currentRes: Restaurant
     
     
     
@@ -19,7 +19,7 @@ struct ListItemView: View {
         
         HStack {
             
-            Image(item.resImage)
+            Image(currentRes.resImage)
             
                 .resizable()
             
@@ -37,7 +37,7 @@ struct ListItemView: View {
             
             VStack(alignment: .leading) {
                 
-                Text(item.resName)
+                Text(currentRes.resName)
                 
                     .font(.headline)
                 
@@ -45,7 +45,7 @@ struct ListItemView: View {
                 
                 VStack(alignment: .leading) {
                     
-                    Text(item.resDescription)
+                    Text(currentRes.resDescription)
                     
                         .font(.caption)
                     
@@ -67,6 +67,6 @@ struct ListItemView: View {
 }
 
 #Preview {
-    ListItemView(item: canoeAndPaddle)
+    ListItemView(currentRes: canoeAndPaddle)
         .padding()
 }
